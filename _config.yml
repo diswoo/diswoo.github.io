@@ -1,2 +1,3 @@
 name: Wu yuyi, Horrible Cop
-markdown: marktext
+markdown: markdown
+permalink: /blog/:year/:month/:day/:title
