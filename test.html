@@ -1,0 +1,68 @@
+<html>
+
+<body>
+    <meta charset="UTF-8">
+<style>
+  a {
+    color: black; /* 初始颜色 */
+  }
+  a:hover {
+    color: blue; /* 鼠标划过时改变颜色 */
+  }
+</style>
+ 
+
+<head>
+</head>
+<div id="max">
+        <div class="re">
+            <ol>
+                <li><a href="https://example.com">访问我们的网站12</a></li>
+                <li><a href="https://example.com">访问我们的网站2</a></li>
+                <li><a href="https://example.com">访问我们的网站3</a></li>
+            </ol>
+        </div>
+    </div>
+
+<script>
+window.onload = function(){
+  var box=this.document.getElementsByClassName("re")[0];
+  var lik=box.getElementsByTagName("li");
+  function fun(i,j){
+    lik[i].onmouseover=1;
+    lik[i].style.opacity=1;
+    lik[j].style.opacity=0;
+    lik[i+3].style.backgroundColor="#ffff00";
+    lik[j+3].style.backgroundColor="#00000000"
+  }
+  fun(0,1);
+  var i =0;
+  function auto(){
+    if(++i>=3){
+      i=0;
+      fun(0,2);
+    }
+    else fun(i,i-1);
+  }
+  timer=this.setInterval(auto,2000);
+  box.onmouseover = function () { 
+    console.log('good');
+    clearInterval(timer);
+  }
+  box.onmouseout = function () { 
+    timer = setInterval(auto, 2000);
+  }
+  var j =0;
+  for(;j<3;j++){
+    lik[j+3].ind=j;
+    lik[j+3].onclick=function(){
+      fun(this.ind,i)
+      i=this.ind;
+    }
+  }
+
+}
+
+</script>
+</body>
+</html>
