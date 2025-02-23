@@ -1,7 +1,7 @@
 ---
 title: Inspiring Tales
 layout: tales
-hide_in_nav: false
+show_in_nav: true
 ---
 
 # Inspiring Tales

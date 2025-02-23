@@ -1,7 +1,7 @@
 ---
 title: Athletic Programs
 layout: programs
-hide_in_nav: false
+show_in_nav: true
 ---
 
 # Athletic Programs

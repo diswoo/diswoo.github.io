@@ -1,7 +1,7 @@
 ---
 title: Our Sporting
 layout: sports
-hide_in_nav: false
+show_in_nav: true
 ---
 
 # Our Sporting
